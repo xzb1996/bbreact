@@ -6,7 +6,7 @@
 - `redux-actions`
 - `高阶组件`
 - `styled-components` css模块化
-- `react-loadable` 路由懒加载
+- `react-loadable` 路由的懒加载
 - `whatwg-fetch` 数据请求
 
 ```javascript
@@ -43,5 +43,5 @@ yarn add react-app-rewired customize-cra babel-plugin-import http-proxy-middlewa
         然后在项目根目录创建一个config-overrides.js 用于修改默认配置
     配置路由文件
         在src下创建setupProxy.js文件
-2、 
+2、 路由配置
 
