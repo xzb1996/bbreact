@@ -5,27 +5,57 @@ import Metro from "./metro/index"
 import FilterBar from "./filterbar/index"
 import Wraper from "./wraper/index"
 import { ChoiceNessWrapper } from "./styled"
-
-export default class ChoiceNess extends Component {
-    state={
-        weekGoods:[]
+import BScrollComponent from "@common/bscroll"
+import { connect } from "react-redux"
+import { mapStateToProps, mapDispatchToProps } from "./connect"
+class ChoiceNess extends Component {
+    state = {
+        weekGoods: []
     }
     render() {
         let { weekGoods } = this.state;
         return (
-            <ChoiceNessWrapper >
-                <Advertising />
-                <Metro />
-                <FilterBar />
-                <Wraper state={weekGoods}/>
-            </ChoiceNessWrapper>
+            <BScrollComponent ref="bscroll">
+                <ChoiceNessWrapper >
+                    <Advertising />
+                    <Metro />
+                    <FilterBar />
+                    <Wraper state={weekGoods} />
+                </ChoiceNessWrapper>
+            </BScrollComponent>
         )
     }
-    async componentDidMount() {
-        let data = await choiceness_api();
-        this.setState({
-            weekGoods:data.martshows
+    componentDidMount() {
+        this.handleGetData();
+        // 上拉
+        this.refs.bscroll.handlepullingUp(async () => {
+            let data = await choiceness_api();
+            let dataMore = this.state.weekGoods.concat(data.martshows)
+            this.setState({
+                weekGoods: dataMore
+            })
+            this.refs.bscroll.handleRestpullingUp();
         })
-        // console.log(data,333);
+        // 下拉刷新
+        this.refs.bscroll.handlepullingDown(() => {
+            this.handleGetData();
+        }) 
+        console.log(111);
+        this.refs.bscroll.handlefinishPullDown();
     }
+
+    async handleGetData() {
+        let data = await choiceness_api();
+        if (data) {
+            this.setState({
+                weekGoods: data.martshows
+            })
+        }
+    }
+
+
+
 }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChoiceNess)

@@ -40,9 +40,9 @@ export const FilterBarWrapper = styled.div`
         padding-left: .6rem;
         z-index: 29;
         background: #F1F1F1;
+        width:88%;
         .nav_inner{
             height: 1.70666667rem;
-            width: 88%; 
             overflow-x: auto;
             white-space: nowrap;
             .nav_item{

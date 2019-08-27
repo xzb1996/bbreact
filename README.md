@@ -9,6 +9,7 @@
 - `react-loadable` 路由的懒加载
 - `whatwg-fetch` 数据请求
 - `qs` 
+- `better-scroll`
 
 ```javascript
 yarn add react-router-dom redux react-redux redux-thunk redux-actions styled-components 
@@ -61,6 +62,8 @@ yarn add react-app-rewired customize-cra babel-plugin-import http-proxy-middlewa
 ### 3、页面渲染
 - chioce页面进行静态布局+数据渲染
 - goods详情页进行静态布局
+- shoppingcart 未登录状态静态布局
+- 登录页面的静态布局
 
 # GitHub使用
 ### 创建自己的仓库
