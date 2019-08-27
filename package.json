@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd-mobile": "^2.3.1",
     "better-scroll": "^1.15.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -14,6 +15,7 @@
     "redux-actions": "^2.6.5",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2",
+    "swiper": "^4.5.0",
     "whatwg-fetch": "^3.0.0"
   },
   "scripts": {

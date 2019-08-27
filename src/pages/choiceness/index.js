@@ -8,12 +8,14 @@ import { ChoiceNessWrapper } from "./styled"
 import BScrollComponent from "@common/bscroll"
 import { connect } from "react-redux"
 import { mapStateToProps, mapDispatchToProps } from "./connect"
+
 class ChoiceNess extends Component {
-    state = {
-        weekGoods: []
+    state={
+        weekGoods:[]
     }
     render() {
         let { weekGoods } = this.state;
+        console.log(weekGoods,1111)
         return (
             <BScrollComponent ref="bscroll">
                 <ChoiceNessWrapper >
@@ -26,7 +28,17 @@ class ChoiceNess extends Component {
         )
     }
     componentDidMount() {
+        this.props.handleGetGoodList();
+
+        // console.log(this.props.weekGoods)
+
         this.handleGetData();
+        
+        // // 上拉
+        // this.refs.bscroll.handlepullingUp(() => {
+        //     this.props.handleGetGoodList();
+        // })
+        // this.refs.bscroll.handleRestpullingUp();
         // 上拉
         this.refs.bscroll.handlepullingUp(async () => {
             let data = await choiceness_api();
@@ -43,7 +55,6 @@ class ChoiceNess extends Component {
         console.log(111);
         this.refs.bscroll.handlefinishPullDown();
     }
-
     async handleGetData() {
         let data = await choiceness_api();
         if (data) {
@@ -52,9 +63,6 @@ class ChoiceNess extends Component {
             })
         }
     }
-
-
-
 }
 
 

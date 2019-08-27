@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import { Wrapper } from "./styled"
-import { HashRouter , Route , Link } from "react-router-dom"
+import { HashRouter , Link } from "react-router-dom"
 export default class Wraper extends Component {
     render() {
         let { state } = this.props
-        // console.log(state, "wrapper")
-        return (
-            
+        return (        
             <Wrapper >
                 {/* wraper */}
                 <HashRouter>

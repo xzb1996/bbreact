@@ -61,7 +61,7 @@ yarn add react-app-rewired customize-cra babel-plugin-import http-proxy-middlewa
 
 ### 3、页面渲染
 - chioce页面进行静态布局+数据渲染
-- goods详情页进行静态布局
+- goods详情页进行静态布局+数据渲染
 - shoppingcart 未登录状态静态布局
 - 登录页面的静态布局
 

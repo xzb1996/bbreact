@@ -8,7 +8,11 @@ export const DetailWrapper = styled.div`
     .banner{
         width:100%;
         height:14rem;
-        background:tomato;
+        background:#fff;
+        img{
+            width:100%;
+            height:100%;
+        }
     }
     .price{
         background:#fff;
@@ -16,6 +20,7 @@ export const DetailWrapper = styled.div`
         .sale-wrap{
             margin-top:.512rem;
             padding:0 .512rem;
+            position:relative;
             .sale_new{
                 font-size:.7rem;
                 font-weight:700;
@@ -26,6 +31,13 @@ export const DetailWrapper = styled.div`
                 color:#999;
                 margin-left:.21333333rem;
                 text-decoration:line-through;
+            }
+            .buying_info{
+                font-size: .512rem;
+                color: #999;
+                position:absolute;
+                right:.9rem;
+                top:.6rem;
             }
         }
     }
