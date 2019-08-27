@@ -1,20 +1,20 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
+.wrapper_header{
+    height: 1.92rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.92rem;
+    color: #3d3d3d;
+    background: #f7fafc;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
 .wrapper{
     width: 100%;
     background: #fff;
     font-size: .85333333rem;
-    min-height: 20rem;
-    .wrapper_header{
-        height: 1.92rem;
-        width: 100%;
-        text-align: center;
-        line-height: 1.92rem;
-        color: #3d3d3d;
-        background: #f7fafc;
-        border-bottom: 1px solid rgba(0,0,0,.08);
-    }
+    min-height: 12rem;
     .list_content{
         width: 100%;
         .item_show{

@@ -34,11 +34,17 @@ const Login = Loadable({
     loading: Loading
 })
 
+const Detail = Loadable({
+    loader: () => import("./detail"),
+    loading: Loading
+})
+
 export {
     ChoiceNess,
     Group,
     Mine,
     NineTwo,
     ShoppingCart,
-    Login
+    Login,
+    Detail
 }

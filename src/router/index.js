@@ -4,7 +4,8 @@ import {
     Mine,
     NineTwo,
     ShoppingCart,
-    Login
+    Login,
+    Detail
 } from "@pages";
 
 
@@ -16,7 +17,7 @@ export const tabBarRoute = [
             flag: true
         },
         name: "今日精选",
-        icon: "\ue618"
+        icon: "\ue53b"
     },
     {
         path: "/nine",
@@ -34,7 +35,7 @@ export const tabBarRoute = [
             flag: true
         },
         name: "团长",
-        icon: "\ue60b"
+        icon: "\ue610"
     },
     {
         path: "/shoppingcart",
@@ -66,6 +67,14 @@ const noTabBarRoute = [
             flag: true
         },
         name: "登录",
+    },
+    {
+        path: "/detail/:iid",
+        component: Detail,
+        meta: {
+            flag: false
+        },
+        name: "详情页",
     }
 ];
 

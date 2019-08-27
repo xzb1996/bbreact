@@ -5,7 +5,7 @@ export const MetroWrapper = styled.div`
 	position: relative;
 	height: 9.17333333rem;
 	overflow: hidden;
-    background: tomato;
+    background: #fff;
     .item{
     position: absolute;
     box-sizing: border-box;

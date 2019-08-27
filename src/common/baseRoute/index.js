@@ -5,7 +5,7 @@ import auth from "@common/auth"
 
 class BaseRoute extends Component {
     render() {
-        console.log(this,"baseroute");
+        // console.log(this,"baseroute");
         let { component, path, ...rest } = this.props;
         return (
             <Layout {...rest}>

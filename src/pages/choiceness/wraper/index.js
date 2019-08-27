@@ -1,32 +1,45 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Wrapper } from "./styled"
-
+import { HashRouter , Route , Link } from "react-router-dom"
 export default class Wraper extends Component {
     render() {
+        let { state } = this.props
+        // console.log(state, "wrapper")
         return (
+            
             <Wrapper >
-                 {/* wraper */}
-                 <section className="wrapper">
-                    <header className="wrapper_header"><span>每天9点准时上新</span></header>
-                    <div className="list_content">
-                        <a className="item_show" href="">
-                            <div className="product-img">
-                                <img className="img_info" src="https://b1.hucdn.com/upload/tuan/1907/23/69745912190000_750x350.jpg!750.webp" alt="" />
-                                <img className="img_icon" src="" alt="" />
+                {/* wraper */}
+                <HashRouter>
+                <header className="wrapper_header"><span>每天9点准时上新</span></header>
+                {
+                    state.map((item,index) => (
+                        <section className="wrapper" key={index}>
+                            <div className="list_content">
+                            
+                                <Link className="item_show" href="#" to={"/detail/"+item.type_home_item_single.iid}>
+                                    <div className="product-img">
+                                        <img className="img_info" src={item.type_home_item_single.img} alt="" />
+                                        <img className="img_icon" src="" alt="" />
+                                    </div>
+                                    <div className="produce_details">
+                                        <p className="product-title">{item.type_home_item_single.title}</p>
+                                        <p className="product-info">{item.type_home_item_single.promotion_desc}</p>
+                                        <p className="product_cur">
+                                            <span className="price_info">￥{item.type_home_item_single.price/100}</span>
+                                            <span className="instant_buy">{item.type_home_item_single.ext}</span>                       
+                                        </p>
+                                    </div>
+                                </Link>
                             </div>
-                            <div className="produce_details">
-                                <p className="product-title">【第2件减3元】网红雪媚娘丹拿海鸭蛋咸蛋黄酥20枚</p>
-                                <p className="product-info">网红蛋黄酥 · 皮酥馅多 · 浓郁蛋香</p>
-                                <p className="product_cur">
-                                    <span className="price_info">￥21.8</span>
-                                    <span className="instant_buy">立即团</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
+                        </section>
+                    ))
+                }
+                </HashRouter>
             </Wrapper>
         )
+    }
+    componentDidMount(){
+
     }
 }
 

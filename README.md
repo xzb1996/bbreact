@@ -59,8 +59,8 @@ yarn add react-app-rewired customize-cra babel-plugin-import http-proxy-middlewa
 - 在api中处理接口 + 完成
 
 ### 3、页面渲染
-- chioce页面进行静态布局
-
+- chioce页面进行静态布局+数据渲染
+- goods详情页进行静态布局
 
 # GitHub使用
 ### 创建自己的仓库

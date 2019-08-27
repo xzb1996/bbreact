@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { AdvertisingWrapper } from "./styled"
 
 export default class Advertising extends Component {

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { FilterBarWrapper } from "./styled"
 
 export default class FilterBar extends Component {
@@ -7,7 +7,7 @@ export default class FilterBar extends Component {
             <FilterBarWrapper >
                  {/* filterbar */}
                  <section className="filterbar">
-                    <a className="search_btn" href=""><i>搜</i></a>
+                    <a className="search_btn" href="#"><i>搜</i></a>
                     <div className="gradient_mask"></div>
                     <div className="filterbar_nav">
                         <div className="nav_inner">

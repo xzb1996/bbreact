@@ -6,10 +6,10 @@ module.exports = (app)=>{
         changeOrigin:true,
     }))
     // 如果需要，继续向下
-    // app.use(proxy("/martshow"),{
-    //     target:"https://dsapi.beibei.com",
-    //     changeOrigin:true,
-    // })
+    app.use(proxy("/ads",{
+        target:"https://dsapi.beibei.com",
+        changeOrigin:true,
+    }))
 }
 
 
